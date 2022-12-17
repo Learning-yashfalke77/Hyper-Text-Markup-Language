@@ -1,0 +1,164 @@
+<!-- Form is the container, box or thing where all the input is put there and also dicatate where the form data should be
+     submitted after form is submitted  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="/tables.html"> <!-- Here action specifies where th data to be sent when form is accepted -->
+    <!-- When you submit a form an HTTP request will be sent and we control where that request goes to, using this 
+        attribute action and by which can be done by attribute method  -->
+
+        <!--  Inputs : Input can be anything like textbox, checkbox etc here input attribute remains same only the
+             type changes references: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input-->
+
+        <!-- Labels : labels are generally used to give more info about particular input -->
+        <!--  Connection of label and input are done usong for and id , for written in label and id written in input and id should always be 
+            unique -->
+        
+        <!-- Here name acts like python dictionary key which will sent to server to the value data that is to be searched or to be sent to 
+            server  always write into input -->
+
+        <h1>Inputs</h1>
+        <p>
+            <label for="username">username</label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+        
+        <p>
+            <label for="password">password</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+
+        <p>
+            <label for="colors">colour</label>
+            <input type="color" id="colors" name="color">
+        </p>
+
+        <p>
+            <input type="number" name="number">
+            <input type="time" name="time">
+
+        </p>
+
+        <!-- Button : we have type attribute which tells that what the type the button should perform, generally submit for form submitting
+            and button for you want to perform any other action-->
+        <!-- on clicking what the button should do, or should go is given by action attribute of forms -->
+
+        <button type="submit">submit</button>
+        <button type="button">doing nothing</button>
+        
+        <!-- Another type of button: using input -->
+        <input type="submit" value="Click me!!!">
+        <!-- Here value is the attribute that gives what to be displayed on the buttton -->
+    </form> 
+
+
+
+    <h2>Hijacking searches</h2>
+    <h3>youtube search</h3>
+    <div>
+            <!-- Here giving connection to search bar of other websites -->
+            <!-- always check the search key term for that website -->
+        <form action="https://www.youtube.com/results?">
+            <label for="searching">search youtube</label>
+            <input type="text" name="search_query" id="searching">
+            <button type="submit">search here</button>
+        </form>
+    </div>
+
+    <h3>google search</h3>
+    <div>
+        <!-- Here giving connection to search bar of other websites -->
+    <form action="https://www.google.com/search?">
+        <label for="searching">search google</label>
+        <input type="text" name="query" id="searching">
+        <button type="submit">search here</button>
+    </form>
+</div>
+
+    <!--             checkboxes         -->
+    <!-- In check boxes you can select multiples  -->
+    <div>
+        <form action="/birds">
+            <input type="checkbox" name="correct" id="agree" checked> 
+            <!-- checked helps to get already checked the box at the starting  -->
+            <label for="agree"> I agree </label>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <!--             radiobutton         -->
+    <!-- In radio button you can select single options (with same name)  -->\
+    <!-- With same name we can group radio boxes  -->
+    <div>
+        <form action="/birds">
+            
+            <input type="radio" name="radio" id="agree1">
+            <label for="agree1"> I agree </label>
+
+            <input type="radio" name="radio" id="not_agree">
+            <!-- checked helps to get already checked the box at the starting  -->
+            <label for="not_agree"> I don't agree </label>
+
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <!-- If you do not group with same name then they will act as multiple choice options  -->
+
+
+    <div>
+        <form action="/birds">
+            
+            <input type="radio" name="radio" id="agree2" value="LOLLLL">
+            <label for="agree2"> I agree </label>
+
+            <input type="radio" name="radio1" id="not_agree1">
+            <!-- checked helps to get already checked the box at the starting  -->
+            <label for="not_agree1"> I don't agree </label>
+
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <!--                       Dropdowns                               -->
+    <div>
+        <label for="meal">Please select meal</label>
+        <select name="meal" id="meal">
+            <option value="">Please choose the option from below</option>
+            <option value="fish">Fish</option>
+            <option value="chicken" selected>Chicken</option>
+            <option value="paneer">Paneer</option>
+        </select>
+    </div>
+ 
+    <div>
+        <!--                             range                      -->
+        <label for="chesse">Amount of cheese</label>
+        <input type="range" id="chesse" min="1" max="10" name="cheeselevel" value="2">
+    </div>
+
+    <div>
+        <label for="no">Number</label>
+        <input type="number" name="number" id="no" min="1" max="1000">
+    </div>
+
+    <div>
+        <label for="feedback"></label>
+        <textarea name="feedback" id="feedback" cols="40" rows="10" placeholder="Please give your feedback it will be alot of help">
+
+        </textarea>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
